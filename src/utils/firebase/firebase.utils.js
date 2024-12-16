@@ -29,7 +29,7 @@ const firebaseConfig = {
   appId: '1:626766232035:web:506621582dab103a4d08d6',
 };
 
-const firebaseApp = initializeApp(firebaseConfig);
+ initializeApp(firebaseConfig);
 
 const googleProvider = new GoogleAuthProvider();
 
@@ -62,6 +62,7 @@ export const addCollectionAndDocuments = async (
   console.log('done');
 };
 
+// get directly by grapgql
 export const getCategoriesAndDocuments = async () => {
   const collectionRef = collection(db, 'categories');
   const q = query(collectionRef);
